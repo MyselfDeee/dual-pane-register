@@ -1,11 +1,18 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AuthHero } from "@/components/AuthHero";
+import { AuthForm } from "@/components/AuthForm";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background p-4 md:p-8">
+      <div className="mx-auto h-[calc(100vh-2rem)] max-w-7xl md:h-[calc(100vh-4rem)]">
+        <div className="grid h-full gap-8 md:grid-cols-2">
+          <div className="hidden md:block">
+            <AuthHero />
+          </div>
+          <div className="flex items-center">
+            <AuthForm />
+          </div>
+        </div>
       </div>
     </div>
   );
